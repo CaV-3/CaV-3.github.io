@@ -1,0 +1,222 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CaV3</title>
+</head>
+<style>
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.previewImgWrapper {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+}
+.previewImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.teaserImgWrapper {
+  position: relative;
+  padding-bottom: 34.35%;
+  height: 0;
+}
+.teaserImgWrapper img {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+.renderingImgWrapper {
+  position: relative;
+  padding-bottom: 24.89%;
+  height: 0;
+}
+.renderingImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.trainImgWrapper {
+  position: relative;
+  padding-bottom: 19.12%;
+  height: 0;
+}
+.trainImgWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+<body>
+<div style="align:center; font-family:Arial; position:absolute; left:10%; right:10%">
+<div style="text-align:center; font-size:36;">
+<br><br>
+CaV3: Cache-aware Viewport Adaptive Volumetric Video Streaming <br>
+<br><br>
+</div>
+<div align="center">
+<table style="text-align:center;">
+<tr align="center" style="font-size:24;">
+	<td align="center" >
+		<a>Anonymous  Author</a>
+	</td>
+</tr>
+<tr align="center" style="font-size:20;">
+	<td align="center" >
+	</td>
+</tr>
+</table>
+<br><br>
+</div>
+<div style="text-align:center; font-size:24; position:relative; top:20px">
+<a href="https://cachev3.github.io/" style="text-decoration: none">[Paper]</a>
+&nbsp;&nbsp; | &nbsp;&nbsp;
+<a href="https://cachev3.github.io/" style="text-decoration: none">[Arxiv]</a>
+&nbsp;&nbsp; | &nbsp;&nbsp;
+<a href="https://cachev3.github.io/" style="text-decoration: none">[Sup. Mat.]</a>
+&nbsp;&nbsp; | &nbsp;&nbsp;
+<a href="https://cachev3.github.io/" style="text-decoration: none">[Code]</a>
+<br><br>
+<div style="text-align:center; font-size:24; line-height:200%;">
+We present a viewport adaptive volumetric video streaming system that dynamicly adapt the cache pool. 
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <video id="teaser" autoplay="" muted="" loop="" playsinline="" width="70%">
+              <source src="cav3_teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+</div>
+<div class="teaserImgWrapper" >
+<img src="image/teaser2_img.jpg"/>
+</div>
+<div style="text-align:center; font-size:36;">
+- Abstract -
+<br><br>
+</div>
+
+<div style="text-align:justify; font-size:24; line-height:200%;">
+Volumetric video (VV) enables an immersive viewing experience and gains lots of momentum. However, challenges extreme bandwidth-intensive streaming inhibits this fast-growing research hotspot. Few works have been carried out on VV streaming. Most existing approaches are extensions of VR streaming or offload cloud rendering. They mainly conduct trajectory prediction and bitrate adaptive streaming on a single captured or co-located object/person. In practical terms, VVs are complex scenarios. Whereas, trajectory prediction accuracy fluctuates and is reduced because of complex interactions and six-degree-of-freedom. The huge bitrate of VV is still burdensome and brings a rock-ribbed challenge to the edge devices and network bandwidth. Conventional video and audio streaming applications often have a hit ratio close to zero. However, most objects in VV are silent, will exist for an intermediate time, and may be viewed at any time. Each cache hit will thrifty bandwidth costs. Therefore, we propose Cache-aware VV system CaV3 using an efficient online cache replacement method \ccr that adapt to users' personalised choices and video contents, and minimize the total regret over time. With the changed requested tiles, we propose a hybrid prediction method \pre have better FoV prediction accuracy and outputs the short, medium, and long term of viewing a tile to assist the cache replacement. In the absence of related benchmarks and datasets, we conduct ablation experiments in a new dataset DS. Evaluation and simulation show that the CCR can greatly reduce the bandwidth cost and HPM have better assistance than the conventional viewport prediction method.
+</div>
+
+
+
+
+  
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Live Demo -
+<br><br>
+</div>
+<div style="text-align:center; font-size:28; line-height:200%;">
+<span style="color: #808080">-- Instructions --</span>
+</div>
+<div style="text-align:center; font-size:24; line-height:200%;">
+<b>Mouse users</b>: left button to rotate; right button to pan; scroll wheel to zoom.
+<br>
+<b>Finger users</b>: one-finger touch to rotate or pan; two-finger touch to pan and zoom.
+<br><br>
+</div>
+
+<div style="text-align:center; font-size:28; line-height:200%;">
+<span style="color: #808080">-- Unbounded 360 scenes --</span>
+</div>
+
+The demo coming soon.
+
+
+<div style="text-align:center; font-size:28; line-height:200%;">
+<br>
+<span style="color: #808080">-- Prediction model --</span>
+</div>
+
+<div class="teaserImgWrapper">
+<img src="prediction.png"/>
+</div>
+
+
+
+<!-- <div style="text-align:center; font-size:36;">
+<br><br>
+
+    
+          
+            
+    
+
+          
+    
+    
+  
+- Method -
+<br><br>
+</div>
+<div class="renderingImgWrapper">
+<img src="image/overview_rendering_img.jpg"/>
+</div>
+<div style="text-align:justify; font-size:24; line-height:200%;">
+<br>
+<b>Rendering.</b>
+We represent the scene as a triangle mesh textured by deep features.
+We first rasterize the mesh to a deferred rendering buffer.
+For each visible fragment, we execute a neural deferred shader that converts the feature and view direction to the corresponding output pixel color.
+<br><br>
+</div>
+<div class="trainImgWrapper">
+<img src="image/overview_train_img.png"/>
+</div>
+<div style="text-align:justify; font-size:24; line-height:200%;">
+<br>
+<b>Training.</b>
+We initialize the mesh as a regular grid, and use MLPs to represent the features and opacity for any point on the mesh.
+For each ray, we compute its intersection points on the mesh, and alpha-composite the colors of those points with respect to their opacity to obtain the output color.
+In a later training stage, we enforce binary alpha values, and perform super-sampling on features for anti-aliasing.
+Finally, we extract the triangle mesh and bake the features and opacity into texture images.
+<br><br>
+</div> -->
+<div style="text-align:center; font-size:36;">
+<br><br>
+- Citing this work -
+<br><br>
+</div>
+<div style="text-align:center; font-size:24; line-height:200%;">
+If you find this work useful in your research, please consider citing:
+<br><br>
+</div>
+<div align="center" style="background-color:#F0F0F0;">
+<div style="width:800px; text-align:left; font-size:20; line-height:100%;">
+<br>
+<pre><code>@article{,
+  title={CaV3: Cache-aware Viewport Adaptive Volumetric Video Streaming},
+  author={Anonymous Author},
+  journal={Anonymous Submission},
+  year={2022}
+}</code></pre>
+<br>
+</div>
+</div>
+<br><br><br><br><br><br><br><br>
+</div>
+</body>
+</body>
+</html>
